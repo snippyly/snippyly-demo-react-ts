@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "snipply-sdk-staging"
+  },
+  "targets": {
+    "snipply-sdk-staging": {
+      "hosting": {
+        "default": [
+          "snippyly-demo-react-ts"
+        ]
+      }
+    }
+  }
+}
