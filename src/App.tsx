@@ -42,7 +42,7 @@ function App() {
 
   const subscribeCursor = () => {
     const cursorElement = Snippyly.getCursorElement();
-    cursorElement.getLiveCursorsOnCurrentDocument().subscribe((cursors) => {
+    cursorElement.getLiveCursorsOnCurrentDocument().subscribe((cursors: any) => {
       console.log('cursors in react', cursors);
     })
   }
