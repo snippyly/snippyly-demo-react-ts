@@ -1,42 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { Snippyly } from '@snippyly/sdk';
-import { Users } from './Users';
+import React, { useEffect, useState } from 'react';
+import './App.css';
 import { SnippylyContext } from './context/SnippylyContext';
+import { Users } from './Users';
 
 function App() {
-  const [snippyly, setSnippyly] = useState();
+  const [snippyly, setSnippyly] = useState<typeof Snippyly | null>(null);
   const [selectedUser, setSelectedUser] = useState<any>();
   const users = Users;
 
   useEffect(() => {
+    initSnippyly();
     if (localStorage.getItem('user')) {
       setSelectedUser(JSON.parse(localStorage.getItem('user')!));
     }
   }, [])
 
   useEffect(() => {
-    if (selectedUser) {
+    if (selectedUser && snippyly) {
       signIn();
     }
-  }, [selectedUser])
+  }, [selectedUser, snippyly])
 
   const initSnippyly = async () => {
-    const snippyly = await Snippyly.init({
-      apiKey: "TA66fUfxZVtGBqGxSTCz", // Add your Api Key here
-      featureAllowList: [], // To allow specific features only
-      // userIdAllowList: ['abcd'], // To allow specific users only
-      urlAllowList: [], // To allow snippyly in specific screens only
-      user: selectedUser // Pass user with unique userId
-    });
+    const snippyly = await Snippyly.init('TA66fUfxZVtGBqGxSTCz'); // Add your Api Key here
     console.log('snippyly', snippyly);
     setSnippyly(snippyly);
   }
 
+  const identifySnippyly = async () => {
+    if(snippyly) {
+      await Snippyly?.identify({
+        featureAllowList: [], // To allow specific features only
+        // userIdAllowList: ['abcd'], // To allow specific users only
+        urlAllowList: [], // To allow snippyly in specific screens only
+        user: selectedUser // Pass user with unique userId
+      });
+      subscribeCursor();
+    }
+  }
+
+  const subscribeCursor = () => {
+    const cursorElement = Snippyly.getCursorElement();
+    cursorElement.getLiveCursorsOnCurrentDocument().subscribe((cursors) => {
+      console.log('cursors in react', cursors);
+    })
+  }
+
   const signIn = (): void => {
     localStorage.setItem('user', JSON.stringify(selectedUser));
-    initSnippyly();
+    identifySnippyly();
   }
 
   const signOut = () => {
@@ -47,7 +60,7 @@ function App() {
   return (
     <SnippylyContext.Provider value={{ snippyly }}>
       <div>
-        <div className='header'>
+        <div className='header'> 
           <snippyly-presence></snippyly-presence>
           <snippyly-cursor></snippyly-cursor>
           <div>
