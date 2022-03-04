@@ -1,39 +1,35 @@
-# Getting Started
+<img src="https://snippyly.com/assets/logo/logo_colored_black.svg" width="250">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Run Project
+# Getting started
+**This demo has two features:**
+1. **Presence:** Who is online on this page.
+2. **Live Cursors:** Where are the online users on the page. It shows their live cursor position.
 
-In the project directory, you can run:
+# Run demo locally
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-## Add typings for Snippyly elements
+# Live demo
 
-Add `declarations.d.ts` file in `src/types` folder and paste the code below:
+### Live demo link
+[https://snippyly-demo-react.web.app](https://snippyly-demo-react.web.app)
 
-```ts
-declare namespace JSX {
-    interface IntrinsicElements {
-        "snippyly-presence": any;
-        "snippyly-cursor": any;
-    }
-}
-```
+### Instructions to try the demo
 
-## Add typings for Snippyly sdk
+**Steps:**
+1. Open the above link in two tabs, side by side: **`tab 1`**: a regular tab; **`tab 2`**: an incognito tab
+2. On **`tab 1`**: Sign in with one of the 3 users given. (e.g. James Smith)
+3. On **`tab 2`**: Sign in with a user different than the one in previous step. (e.g. Maria Garcia)
 
-Add `snippyly.d.ts` file in `src/types` folder and paste the code below:
+**Note:**
+* Now you will start seeing Presence icons and Live cursors for each of the users.
+* For the cursors to work each, you need to ensure that the tab is active. You can click on the page to ensure that its active.
 
-```ts
-declare module '@snippyly/sdk' {
-    class Snippyly { static [key: string]: any; static [key: string]: () => any }
-    export { Snippyly }
-}
-```
+
+# Documentation
+
+### SDK documentation
+[https://sdk.snippyly.com/docs](https://sdk.snippyly.com/docs)
+
