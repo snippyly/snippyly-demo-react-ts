@@ -8,8 +8,18 @@
 
 # Run demo locally
 
+Run `yarn start` command to run demo locally.
 
+If you want to implement Snippyly in react typescript app using cdn method then please follow below steps:
 
+1. Copy `declarations.d.ts` file in `src/types` folder.
+2. Add `SnippylyContext.ts` file in `src/context` folder.
+3. Refer `App.tsx` code to load Snippyly and initialize it with your api key.
+4. Refer `Toolbar.tsx` file to set user in Snippyly.
+5. If you want to show user cursors then add `<snippyly-cursor></snippyly-cursor>` in `App.tsx` file.
+6. If you want to show user presence then add `<snippyly-presence></snippyly-presence>`. In this demo, this tag is added in `Toolbar.tsx` component, but it can be added in any other component you want.
+
+For more instructions and customization, please follow SDK Documentation.
 
 # Live demo
 
