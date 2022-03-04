@@ -1,7 +1,7 @@
 <img src="https://snippyly.com/assets/logo/logo_colored_black.svg" width="250">
 
 
-# Getting started
+# Snippyly React (TS) Demo
 **This demo has two features:**
 1. **Presence:** Who is online on this page.
 2. **Live Cursors:** Where are the online users on the page. It shows their live cursor position.
