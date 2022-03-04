@@ -27,7 +27,7 @@
 * Now you will start seeing Presence icons and Live cursors for each of the users.
 * For the cursors to work each, you need to ensure that the tab is active. You can click on the page to ensure that its active.
 
-<img src="https://snippyly.com/assets/images/react-demo.gif" width="300">
+<img src="https://snippyly.com/assets/images/react-demo.gif" width="500">
 
 
 
