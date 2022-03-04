@@ -14,7 +14,7 @@
 # Live demo
 
 ### Live demo link
-[https://snippyly-demo-react.web.app](https://snippyly-demo-react.web.app)
+[https://snippyly-demo-react-ts.web.app](https://snippyly-demo-react-ts.web.app)
 
 ### Instructions to try the demo
 
