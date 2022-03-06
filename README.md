@@ -10,7 +10,7 @@
 
 Run `yarn start` command to run demo locally.
 
-If you want to implement Snippyly in react typescript app using cdn method then please follow below steps:
+Here are key pointers if you are implementing Snippyly SDK in your own React (TS) app:
 
 1. Copy `declarations.d.ts` file in `src/types` folder.
 2. Add `SnippylyContext.ts` file in `src/context` folder.
