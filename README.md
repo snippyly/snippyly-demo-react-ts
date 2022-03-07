@@ -15,7 +15,25 @@ Here are key pointers if you are implementing Snippyly SDK in your own React (TS
 1. Copy `declarations.d.ts` file in `src/types` folder.
 2. Add `SnippylyContext.ts` file in `src/context` folder.
 3. Refer `App.tsx` code to load Snippyly and initialize it with your api key.
-4. Refer `Toolbar.tsx` file to set user in Snippyly.
+   ```ts
+   const snippyly = await Snippyly.init('YOUR_API_KEY_HERE', {
+      featureAllowList: [], // To allow specific features only
+      userIdAllowList: [], // To allow specific users only
+      urlAllowList: [], // To allow snippyly in specific screens only
+    });
+   ```
+4. Refer `Toolbar.tsx` file to set user in Snippyly. Call below function once logged in user data and snippyly object is available:
+   ```ts
+   const identifySnippyly = async () => {
+        if (snippyly) {
+            snippyly.identify(user).then((res) => {
+                // User login successful
+            }).catch((err) => {
+                // User login failure
+            });
+        }
+    }
+   ```
 5. If you want to show user cursors then add `<snippyly-cursor></snippyly-cursor>` in `App.tsx` file.
 6. If you want to show user presence then add `<snippyly-presence></snippyly-presence>`. In this demo, this tag is added in `Toolbar.tsx` component, but it can be added in any other component you want.
 
