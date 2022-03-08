@@ -6,38 +6,13 @@
 1. **Presence:** Who is online on this page.
 2. **Live Cursors:** Where are the online users on the page. It shows their live cursor position.
 
+# Documentation
+
+[https://sdk.snippyly.com/docs/react-ts-docs](https://sdk.snippyly.com/docs/react-ts-docs)
+
 # Run demo locally
 
 Run `yarn start` command to run demo locally.
-
-Here are key pointers if you are implementing Snippyly SDK in your own React (TS) app:
-
-1. Copy `declarations.d.ts` file in `src/types` folder.
-2. Add `SnippylyContext.ts` file in `src/context` folder.
-3. Refer `App.tsx` code to load Snippyly and initialize it with your api key.
-   ```ts
-   const snippyly = await Snippyly.init('YOUR_API_KEY_HERE', {
-      featureAllowList: [], // To allow specific features only
-      userIdAllowList: [], // To allow specific users only
-      urlAllowList: [], // To allow snippyly in specific screens only
-    });
-   ```
-4. Refer `Toolbar.tsx` file to set user in Snippyly. Call below function once logged in user data and snippyly object is available:
-   ```ts
-   const identifySnippyly = async () => {
-        if (snippyly) {
-            snippyly.identify(user).then((res) => {
-                // User login successful
-            }).catch((err) => {
-                // User login failure
-            });
-        }
-    }
-   ```
-5. If you want to show user cursors then add `<snippyly-cursor></snippyly-cursor>` in `App.tsx` file.
-6. If you want to show user presence then add `<snippyly-presence></snippyly-presence>`. In this demo, this tag is added in `Toolbar.tsx` component, but it can be added in any other component you want.
-
-For more instructions and customization, please follow SDK Documentation.
 
 # Live demo
 
@@ -56,11 +31,3 @@ For more instructions and customization, please follow SDK Documentation.
 * For the cursors to work each, you need to ensure that the tab is active. You can click on the page to ensure that its active.
 
 <img src="https://snippyly.com/assets/images/react-demo.gif" width="500">
-
-
-
-# Documentation
-
-### SDK documentation
-[https://sdk.snippyly.com/docs](https://sdk.snippyly.com/docs)
-
