@@ -8,10 +8,10 @@ function App() {
   const [snippyly, setSnippyly] = useState<Snippyly>(null as any);
 
   useEffect(() => {
-    initSnippyly();
+    init();
   }, [])
 
-  const initSnippyly = async () => {
+  const init = async () => {
     const snippyly = await Snippyly.init('TA66fUfxZVtGBqGxSTCz', {
       featureAllowList: [], // To allow specific features only
       // userIdAllowList: ['abcd'], // To allow specific users only
