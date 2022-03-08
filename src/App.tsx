@@ -5,7 +5,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import { SnippylyContext } from './context/SnippylyContext';
 
 function App() {
-  const [snippyly, setSnippyly] = useState<Snippyly>(null as any);
+  const [client, setClient] = useState<Snippyly>(null as any);
 
   useEffect(() => {
     init();
@@ -18,11 +18,11 @@ function App() {
       urlAllowList: [], // To allow snippyly in specific screens only
     }); // Add your Api Key here
     console.log('snippyly', snippyly);
-    setSnippyly(snippyly);
+    setClient(snippyly);
   }
 
   return (
-    <SnippylyContext.Provider value={{ snippyly }}>
+    <SnippylyContext.Provider value={{ client }}>
       <div>
         <snippyly-cursor></snippyly-cursor>
         <Toolbar />
