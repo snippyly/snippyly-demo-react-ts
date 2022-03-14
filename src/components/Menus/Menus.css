@@ -1,0 +1,9 @@
+.menu {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.menu.selected {
+    color: #0084ff;
+    font-weight: bold;
+}

@@ -1,6 +1,7 @@
 import { Snippyly } from '@snippyly/sdk';
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Tabs from './components/Tabs/Tabs';
 import Toolbar from './components/Toolbar/Toolbar';
 import { SnippylyContext } from './context/SnippylyContext';
 
@@ -24,8 +25,9 @@ function App() {
   return (
     <SnippylyContext.Provider value={{ client }}>
       <div>
-        <snippyly-cursor></snippyly-cursor>
+        <snippyly-cursor></snippyly-cursor> 
         <Toolbar />
+        <Tabs />
       </div>
     </SnippylyContext.Provider>
   );

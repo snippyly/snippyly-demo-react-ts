@@ -1,0 +1,36 @@
+.tabs-container {
+    display: flex;
+    padding: 24px;
+}
+
+.tabs-block {
+    margin-right: 64px;
+}
+
+.tab {
+    padding: 1rem;
+    margin: 1rem;
+    background: #f7f7f7;
+    min-width: 6rem;
+    text-align: center;
+    border-radius: 6rem;
+    cursor: pointer;
+}
+
+.tab.selected {
+    background: #0084ff;
+    color: white;
+    font-weight: bold;
+}
+
+.tabs-content {
+    flex: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+.clear-btn {
+    cursor: pointer;
+    color: #0084ff;
+    text-decoration: underline;
+}
