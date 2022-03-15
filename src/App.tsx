@@ -8,6 +8,8 @@ import { SnippylyContext } from './context/SnippylyContext';
 function App() {
   const [client, setClient] = useState<Snippyly>(null as any);
 
+  const [selectedMenu, setSelectedMenu] = useState();
+
   useEffect(() => {
     init();
   }, [])
@@ -26,8 +28,8 @@ function App() {
     <SnippylyContext.Provider value={{ client }}>
       <div>
         <snippyly-cursor></snippyly-cursor> 
-        <Toolbar />
-        <Tabs />
+        <Toolbar onMenuSelect={(menu: any) => setSelectedMenu(menu)} />
+        <Tabs selectedMenu={selectedMenu} />
       </div>
     </SnippylyContext.Provider>
   );

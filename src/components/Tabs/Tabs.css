@@ -34,3 +34,10 @@
     color: #0084ff;
     text-decoration: underline;
 }
+
+.notes-container {
+    margin: 24px;
+    padding: 8px 24px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}

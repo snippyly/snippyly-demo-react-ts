@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSnippylyClient } from '../../context/SnippylyContext';
 import './Menus.css';
 
-function Menus() {
+function Menus({ onMenuSelect }: { onMenuSelect: Function }) {
 
     const menuArray = [
-        { name: 'Home', link: '' },
-        { name: 'About Us', link: 'about-us' },
-        { name: 'Contact Us', link: 'contact-us' }
+        { name: 'Document 1', link: '' },
+        { name: 'Document 2', link: 'document-2' },
+        { name: 'Document 3', link: 'document-3' }
     ]
 
     const [menus, setMenus] = useState(menuArray);
     const [selectedMenu, setSelectedMenu] = useState(0);
+
+    useEffect(() => {
+        const menu = menus[selectedMenu];
+        onMenuSelect(menu);
+    }, [selectedMenu])
 
     const { client } = useSnippylyClient();
 
