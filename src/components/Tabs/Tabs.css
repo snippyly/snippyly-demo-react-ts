@@ -36,6 +36,12 @@
 }
 
 .notes-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.notes-block {
     margin: 24px;
     padding: 8px 24px;
     background: #f7f7f7;

@@ -58,12 +58,14 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
                 </div>
             </div>
             <div className='notes-container'>
-                <h3>NOTE:</h3>
-                <ul>
-                    <li>Presence: The avatar of other online users shows at document level.</li>
-                    <li>Cursors: Cursors of others online show at Section level. If no section is selected it will show at Document level.</li>
-                    <li>Sections are always under Documents in hierarchy.</li>
-                </ul>
+                <div className='notes-block'>
+                    <h3>NOTE:</h3>
+                    <ul>
+                        <li>Presence: The avatar of other online users shows at document level.</li>
+                        <li>Cursors: Cursors of others online show at Section level. If no section is selected it will show at Document level.</li>
+                        <li>Sections are always under Documents in hierarchy.</li>
+                    </ul>
+                </div>
             </div>
         </>
     )
