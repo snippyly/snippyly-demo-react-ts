@@ -15,3 +15,32 @@
   margin: 0 0 0 16px;
   cursor: pointer;
 }
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 200px;
+  min-width: 200px;
+  background: greenyellow;
+  border-radius: 8px;
+  flex: 0 0 20%;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+@media (max-width: 700px) {
+  .box {
+    min-width: 400px !important;
+  }
+
+  #box2,
+  #box5 {
+    display: none;
+  }
+}
