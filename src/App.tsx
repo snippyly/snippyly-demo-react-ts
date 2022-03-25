@@ -27,12 +27,13 @@ function App() {
         <snippyly-cursor></snippyly-cursor>
         <Toolbar />
         <div className="box-container">
-          <div className="box" id="box1"><span>1</span></div>
-          <div className="box" id="box2"><span>2</span></div>
-          <div className="box" id="box3"><span>3</span></div>
-          <div className="box" id="box4"><span>4</span></div>
-          <div className="box" id="box5"><span>5</span></div>
-          <div className="box" id="box6"><span>6</span></div>
+          {
+            Array.from({ length: 25 }, (_, i) => i + 1).map((value) => {
+              return (
+                <div className="box" id={`box${value}`} key={value}><span>{value}</span></div>
+              )
+            })
+          }
         </div>
       </div>
     </SnippylyContext.Provider>
