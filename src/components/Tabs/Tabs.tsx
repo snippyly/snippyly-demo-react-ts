@@ -3,10 +3,17 @@ import { useSnippylyClient } from '../../context/SnippylyContext';
 import './Tabs.css';
 
 function Tabs({ selectedMenu }: { selectedMenu: any }) {
-    const [tabs, setTabs] = useState(['Section 1', 'Section 2', 'Section 3']);
+    const [tabs, setTabs] = useState(['Child Document 1', 'Child Document 2', 'Child Document 3']); // change it to child document, ui similar to slides
+    const [tabDocumentParams, setTabDocumentParams] = useState<any>([]);
     const [selectedTab, setSelectedTab] = useState<number>();
 
     const { client } = useSnippylyClient();
+
+    useEffect(() => {
+        setTabDocumentParams(tabs.map((tab, index) => {
+            return { selectedTab: index + 1 }
+        }));
+    }, [])
 
     useEffect(() => {
         if (client) {
@@ -40,7 +47,14 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
                     {
                         tabs.map((tab, index) => {
                             return (
-                                <div key={index} className={`tab ${(selectedTab === index + 1) ? 'selected' : ''}`} onClick={() => setSelectedTab(index + 1)}>{tab}</div>
+                                <>
+                                    <div key={index} className={`tab ${(selectedTab === index + 1) ? 'selected' : ''}`} onClick={() => setSelectedTab(index + 1)}>
+                                        {tab}
+                                        <div className='presence-container'>
+                                            <snippyly-presence id={`tab${index}`} max-users="1" document-params={JSON.stringify(tabDocumentParams[index])}></snippyly-presence>
+                                        </div>
+                                    </div>
+                                </>
                             )
                         })
                     }

@@ -11,10 +11,11 @@
     padding: 1rem;
     margin: 1rem;
     background: #f7f7f7;
-    min-width: 6rem;
+    min-width: 12rem;
     text-align: center;
-    border-radius: 6rem;
     cursor: pointer;
+    min-height: 6rem;
+    position: relative;
 }
 
 .tab.selected {
@@ -46,4 +47,16 @@
     padding: 8px 24px;
     background: #f7f7f7;
     border-radius: 8px;
+}
+
+.presence-container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.presence-container .s-presence-avatar {
+    width: 1rem !important;
+    height: 1rem !important;
+    font-size: 0.7rem;
 }
