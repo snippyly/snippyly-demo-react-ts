@@ -2,7 +2,7 @@ export const Users = [
     {
         userId: '1',
         name: 'James Smith',
-        photoUrl: 'https://snippyly.com/assets/avatars/avatar-panda.svg',
+        photoUrl: '',
         email: 'james.smith@gmail.com',
         plan: 'free',
         groupId: ''
@@ -18,24 +18,8 @@ export const Users = [
     {
         userId: '3',
         name: 'Sarah Wilson',
-        photoUrl: 'https://snippyly.com/assets/avatars/avatar-monkey.svg',
+        photoUrl: '',
         email: 'sarah.wilson@gmail.com',
-        plan: 'trial',
-        groupId: ''
-    },
-    {
-        userId: '4',
-        name: 'James Bond',
-        photoUrl: '',
-        email: 'james.bond@gmail.com',
-        plan: 'trial',
-        groupId: ''
-    },
-    {
-        userId: '5',
-        name: 'One Two',
-        photoUrl: '',
-        email: 'one.two@gmail.com',
         plan: 'trial',
         groupId: ''
     }
