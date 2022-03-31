@@ -1,0 +1,24 @@
+name: with-document-params
+
+on:
+  push:
+    branches:
+    - with-document-params
+
+jobs:
+  firebase-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: '14.x'
+    - run: npm install
+    - run: CI=false npm run build
+    - uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting:wdp
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
