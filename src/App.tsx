@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
 import { SnippylyContext } from './context/SnippylyContext';
+import "@snippyly/sdk/snippyly.css";
 
 function App() {
   const [client, setClient] = useState<Snippyly>(null as any);
@@ -25,6 +26,11 @@ function App() {
     <SnippylyContext.Provider value={{ client }}>
       <div>
         <snippyly-cursor></snippyly-cursor>
+        <snippyly-comment-tool>
+          <div className='add-comment-btn'>
+            <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
+          </div>
+        </snippyly-comment-tool>
         <Toolbar />
         <div className="box-container">
           {
