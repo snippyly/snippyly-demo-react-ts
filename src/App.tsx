@@ -4,7 +4,7 @@ import './App.css';
 import Tabs from './components/Tabs/Tabs';
 import Toolbar from './components/Toolbar/Toolbar';
 import { SnippylyContext } from './context/SnippylyContext';
-import "/node_modules/@snippyly/sdk/snippyly.css";
+import "@snippyly/sdk/snippyly.css";
 
 function App() {
   const [client, setClient] = useState<Snippyly>(null as any);
