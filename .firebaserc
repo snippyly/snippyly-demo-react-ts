@@ -10,6 +10,9 @@
         ],
         "wdp": [
           "snippyly-demo-react-ts-wdp"
+        ],
+        "staging": [
+          "snippyly-demo-react-ts-staging"
         ]
       }
     }

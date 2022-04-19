@@ -1,6 +1,7 @@
 .menu {
     margin: 0 12px;
     cursor: pointer;
+    display: inline-block;
 }
 
 .menu.selected {

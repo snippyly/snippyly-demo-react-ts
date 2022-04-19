@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@snippyly/sdk": "1.0.26",
+    "@snippyly/sdk": "^1.0.27",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -25,8 +25,10 @@
     "eject": "react-scripts eject",
     "deploy": "firebase deploy --only hosting:default",
     "deploy:wdp": "firebase deploy --only hosting:wdp",
+    "deploy:staging": "firebase deploy --only hosting:staging",
     "build:deploy": "npm run build && npm run deploy",
-    "build:deploy:wdp": "npm run build && npm run deploy:wdp"
+    "build:deploy:wdp": "npm run build && npm run deploy:wdp",
+    "build:deploy:staging": "npm run build && npm run deploy:staging"
   },
   "eslintConfig": {
     "extends": [

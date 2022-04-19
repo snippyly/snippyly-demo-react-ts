@@ -23,9 +23,9 @@ function Toolbar({ onMenuSelect }: { onMenuSelect: Function }) {
 
     const identifySnippyly = async () => {
         if (client) {
-            client.identify(selectedUser).then((res) => {
+            client.identify(selectedUser).then((res: any) => {
                 // User login successful
-            }).catch((err) => {
+            }).catch((err: any) => {
                 // User login failure
             });
         }
