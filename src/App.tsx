@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
 import { SnippylyContext } from './context/SnippylyContext';
-import "@snippyly/sdk/snippyly.css";
 
 function App() {
   const [client, setClient] = useState<Snippyly>(null as any);

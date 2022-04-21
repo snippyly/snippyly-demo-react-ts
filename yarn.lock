@@ -1697,10 +1697,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snippyly/sdk@^1.0.27":
-  version "1.0.27"
-  resolved "https://registry.yarnpkg.com/@snippyly/sdk/-/sdk-1.0.27.tgz#d222cbb77ab72a2fc16270d49d7bb95cc5fe7503"
-  integrity sha512-yhDvuagYibc9EbKciLh/TO5wWNOgNbbS42RQWPTqlVXORba7mWnKXzNXgTPbEf+6ny8fK3ze5knEA3pM3mKAJQ==
+"@snippyly/sdk@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.yarnpkg.com/@snippyly/sdk/-/sdk-1.0.28.tgz#61e1c9bcedd8517ed0b94bec97ecc26d5c14cf44"
+  integrity sha512-M0hKWY8VFzOtprKGvbfj9tOOsBqzRGGxPqxkatc6stK1nUGya6Nd+v88MtoOQmFuSg94vL/XqprG4fAKCzBmpQ==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
