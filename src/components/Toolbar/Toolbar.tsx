@@ -56,7 +56,7 @@ function Toolbar() {
                         <div>
                             <span>Sign In with:</span>
                             {
-                                users.map((user) => {
+                                users.map((user: any) => {
                                     return (
                                         <button key={user.userId} className='custom-btn' onClick={() => signIn(user)}>{user?.name}</button>
                                     )
