@@ -28,6 +28,7 @@ function App() {
     <SnippylyContext.Provider value={{ client }}>
       <div>
         <snippyly-cursor></snippyly-cursor>
+        <snippyly-comments></snippyly-comments>
         <snippyly-comment-tool>
           <div className='add-comment-btn'>
             <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
