@@ -5,7 +5,19 @@ export const Users = [
         photoUrl: '',
         email: 'james.smith@gmail.com',
         plan: 'free',
-        groupId: ''
+        groupId: '',
+        contacts: [
+            {
+                userId: '2',
+                name: 'Maria Garcia',
+                email: 'maria.garcia@gmail.com',
+            },
+            {
+                userId: '3',
+                name: 'Sarah Wilson',
+                email: 'sarah.wilson@gmail.com',
+            }
+        ]
     },
     {
         userId: '2',
@@ -13,7 +25,19 @@ export const Users = [
         photoUrl: '',
         email: 'maria.garcia@gmail.com',
         plan: 'paid',
-        groupId: ''
+        groupId: '',
+        contacts: [
+            {
+                userId: '1',
+                name: 'James Smith',
+                email: 'james.smith@gmail.com',
+            },
+            {
+                userId: '3',
+                name: 'Sarah Wilson',
+                email: 'sarah.wilson@gmail.com',
+            }
+        ]
     },
     {
         userId: '3',
@@ -21,6 +45,18 @@ export const Users = [
         photoUrl: '',
         email: 'sarah.wilson@gmail.com',
         plan: 'trial',
-        groupId: ''
+        groupId: '',
+        contacts: [
+            {
+                userId: '1',
+                name: 'James Smith',
+                email: 'james.smith@gmail.com',
+            },
+            {
+                userId: '2',
+                name: 'Maria Garcia',
+                email: 'maria.garcia@gmail.com',
+            }
+        ]
     }
 ];
