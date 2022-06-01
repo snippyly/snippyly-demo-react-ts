@@ -4,5 +4,6 @@ declare namespace JSX {
         "snippyly-cursor": any;
         "snippyly-comment-tool": any;
         "snippyly-comments": any;
+        "snippyly-comments-sidebar": any;
     }
 }
