@@ -22,7 +22,7 @@ function App() {
 
     // To enable text comment feature
     const commentElement = client.getCommentElement();
-    commentElement.enableTextCommentButton(true);
+    commentElement.enableTextComments(true);
   }
 
   return (
@@ -30,6 +30,7 @@ function App() {
       <div>
         <snippyly-cursor></snippyly-cursor>
         <snippyly-comments></snippyly-comments>
+        <snippyly-comments-sidebar></snippyly-comments-sidebar>
         <snippyly-comment-tool>
           <div className='add-comment-btn'>
             <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
