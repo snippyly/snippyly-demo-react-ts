@@ -38,6 +38,15 @@
   padding: 24px;
 }
 
+.menu {
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: #0084ff;
+}
+
 @media (max-width: 700px) {
   .box {
     min-width: 400px !important;

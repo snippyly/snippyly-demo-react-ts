@@ -42,9 +42,17 @@ function Toolbar() {
         window.location.reload();
     }
 
+    const navigateTo = (path: string) => {
+        window.open(path, '_self');
+    }
+
     return (
         <div className='header'>
             <snippyly-presence></snippyly-presence>
+            <div className='menu-container'>
+                <span className='menu' onClick={() => navigateTo('/')}>Home</span>
+                <span className='menu' onClick={() => navigateTo('/stream-view')}>Stream View</span>
+            </div>
             <div>
                 {
                     selectedUser ?

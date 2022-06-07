@@ -1,0 +1,25 @@
+.stream-view-container {
+    height: calc(100vh - 98px);
+    overflow: auto;
+    position: relative;
+    border-top: 1px solid lightgrey;
+}
+
+.stream-view-docs {
+    max-width: 600px;
+    padding: 24px;
+    box-shadow: 0px 0px 8px -3px #8d8d8d;
+    border-radius: 8px;
+    margin: 12px 0;
+    margin-left: 10rem;
+    display: inline-block;
+}
+
+.stream-view-comments-container {
+    margin-left: 24px;
+    display: inline-block;
+}
+
+.stream-view-comments-container .snippyly-comments-on-right-container {
+    right: unset !important;
+}
