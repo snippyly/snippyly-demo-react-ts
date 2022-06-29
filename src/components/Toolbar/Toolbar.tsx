@@ -38,6 +38,9 @@ function Toolbar() {
     }
 
     const signOut = () => {
+        if(client) {
+            client.signOutUser();
+        }
         localStorage.removeItem('user');
         window.location.reload();
     }
