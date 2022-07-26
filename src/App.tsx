@@ -22,6 +22,10 @@ function App() {
     }); // Add your Api Key here
     console.log('snippyly client', client);
     setClient(client);
+
+    // Enable attachment feature
+    const commentElement = client.getCommentElement();
+    commentElement.enableAttachment(true);
   }
 
   return (
