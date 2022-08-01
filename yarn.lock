@@ -1455,10 +1455,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snippyly/sdk@^1.0.43":
-  version "1.0.44"
-  resolved "https://registry.yarnpkg.com/@snippyly/sdk/-/sdk-1.0.44.tgz#9e7e5337c60242b730feb7a8a1d00df70f01f166"
-  integrity sha512-uPfhCGxMCFonpRuCcRY3r+BuI2HIm+VSgTb0r00fOiNOYHTIeASrHoM7hlc72PTanmm09E7/Rp6d14kPHkNyVw==
+"@snippyly/sdk@^1.0.45":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@snippyly/sdk/-/sdk-1.0.45.tgz#ee87366756409ae91b03447f5e21ae5165ff9f90"
+  integrity sha512-X1Ay4HjWz988jF1KeJ+NUy4bP4x9xgTliOa8f0E+j/qEZE3XEODf9gFn6ezU79oSR/J/KvTJ1NmTOfxEjTezwQ==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
