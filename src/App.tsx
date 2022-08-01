@@ -28,6 +28,8 @@ function App() {
     commentElement.enableTextComments(true);
     // Enable attachment feature
     commentElement.enableAttachment(true);
+    // Set document id
+    client.setDocumentId(window.location.href);
   }
 
   return (

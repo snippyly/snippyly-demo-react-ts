@@ -37,9 +37,9 @@ function Toolbar() {
         setSelectedUser(user);
     }
 
-    const signOut = () => {
-        if(client) {
-            client.signOutUser();
+    const signOut = async () => {
+        if (client) {
+            await client.signOutUser();
         }
         localStorage.removeItem('user');
         window.location.reload();
