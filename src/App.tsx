@@ -28,8 +28,25 @@ function App() {
     commentElement.enableTextComments(true);
     // Enable attachment feature
     commentElement.enableAttachment(true);
+
+    // To enable text comment feature
+    const selectionElement = client.getSelectionElement();
+    selectionElement.enableSelections(true);
+
     // Set document id
-    client.setDocumentId(window.location.href);
+    client.setDocumentId(excludeSnippylyParamsFromUrl(window.location.href));
+  }
+
+  const excludeSnippylyParamsFromUrl = (url: string) => {
+    try {
+      const tempUrl = new URL(url);
+      ['review', 'sreviewId', 'snippyly-user', 'scommentId', 'stagId'].forEach((param) => {
+        tempUrl.searchParams.delete(param);
+      });
+      return tempUrl.href;
+    } catch (err) {
+      return url;
+    }
   }
 
   return (
