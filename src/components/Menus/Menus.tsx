@@ -17,7 +17,7 @@ function Menus({ onMenuSelect }: { onMenuSelect: Function }) {
 
     useEffect(() => {
         if (client) {
-            setDocumentId(0, `${window.location.href}${menuArray[0].link}`);
+            setDocumentId(0, `${window.location.origin}/${menuArray[0].link}`);
         }
     }, [client])
 
@@ -40,7 +40,7 @@ function Menus({ onMenuSelect }: { onMenuSelect: Function }) {
                     return (
                         <span className={`menu ${selectedMenu === index ? 'selected' : ''}`}
                             key={menu.name}
-                            onClick={() => setDocumentId(index, `${window.location.href}${menu.link}`)}>
+                            onClick={() => setDocumentId(index, `${window.location.origin}/${menu.link}`)}>
                             {menu.name}
                         </span>
                     )

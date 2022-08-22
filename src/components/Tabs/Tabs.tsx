@@ -33,9 +33,9 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
         if (client) {
             if (selectedTab) {
                 const params = { selectedTab };
-                client.setDocumentParams(params);
+                client.setLocation(params);
             } else {
-                client.removeDocumentParams();
+                client.removeLocation();
             }
         }
     }
@@ -51,7 +51,7 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
                                     <div key={index} className={`tab ${(selectedTab === index + 1) ? 'selected' : ''}`} onClick={() => setSelectedTab(index + 1)}>
                                         {tab}
                                         <div className='presence-container'>
-                                            <snippyly-presence id={`tab${index}`} max-users="1" document-params={JSON.stringify(tabDocumentParams[index])}></snippyly-presence>
+                                            <snippyly-presence id={`tab${index}`} max-users="1" location={JSON.stringify(tabDocumentParams[index])}></snippyly-presence>
                                         </div>
                                     </div>
                                 </>
