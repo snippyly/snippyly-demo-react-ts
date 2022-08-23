@@ -29,9 +29,9 @@ function App() {
     // Enable attachment feature
     commentElement.enableAttachment(true);
 
-    // To enable text comment feature
+    // To enable live selection feature
     const selectionElement = client.getSelectionElement();
-    selectionElement.enableSelections(true);
+    selectionElement.enableLiveSelection(true);
 
     // Set document id
     client.setDocumentId(excludeSnippylyParamsFromUrl(window.location.href));
