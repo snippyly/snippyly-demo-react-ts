@@ -4,6 +4,22 @@ function Home() {
     return (
         <>
             <snippyly-comments></snippyly-comments>
+            <div className='toolbar-2'>
+                <div className="recorder-buttons">
+                    <div>Recorders:</div>
+                    <snippyly-recorder-tool type="all"></snippyly-recorder-tool>
+                    <snippyly-recorder-tool type="audio"></snippyly-recorder-tool>
+                    <snippyly-recorder-tool type="video"></snippyly-recorder-tool>
+                    <snippyly-recorder-tool type="screen"></snippyly-recorder-tool>
+                </div>
+                <div className="huddle-buttons">
+                    <div>Huddle:</div>
+                    <snippyly-huddle-tool type="all"></snippyly-huddle-tool>
+                    <snippyly-huddle-tool></snippyly-huddle-tool>
+                    <snippyly-huddle-tool type="video"></snippyly-huddle-tool>
+                    <snippyly-huddle-tool type="presentation"></snippyly-huddle-tool>
+                </div>
+            </div>
             <div className="box-container">
                 {
                     Array.from({ length: 25 }, (_, i) => i + 1).map((value) => {

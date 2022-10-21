@@ -56,11 +56,10 @@ function App() {
       <div>
         <snippyly-cursor></snippyly-cursor>
         <snippyly-comments-sidebar></snippyly-comments-sidebar>
-        <snippyly-comment-tool>
-          <div className='add-comment-btn'>
-            <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
-          </div>
-        </snippyly-comment-tool>
+        <snippyly-comment-tool></snippyly-comment-tool>
+        <snippyly-recorder-control-panel></snippyly-recorder-control-panel>
+        <snippyly-recorder-notes></snippyly-recorder-notes>
+        <snippyly-huddle></snippyly-huddle>
         <Toolbar />
         <Routes>
           <Route path='/' element={<Home />} />
