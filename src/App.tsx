@@ -1,42 +1,30 @@
-import { Snippyly } from '@snippyly/sdk';
-import React, { useEffect, useState } from 'react';
+import { SnippylyCommentsSidebar, SnippylyCommentTool, SnippylyCursor, SnippylyHuddle, SnippylyProvider, SnippylyRecorderControlPanel, SnippylyRecorderNotes } from '@snippyly/react';
+import { Snippyly } from '@snippyly/types';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
 import StreamView from './components/StreamView/StreamView';
 import Toolbar from './components/Toolbar/Toolbar';
-import { SnippylyContext } from './context/SnippylyContext';
 
 function App() {
-  const [client, setClient] = useState<Snippyly>(null as any);
 
-  useEffect(() => {
-    init();
-  }, [])
+  const init = async (client?: Snippyly) => {
+    if (client) {
+      // To enable text comment feature
+      const commentElement = client.getCommentElement();
+      commentElement.enableTextComments(true);
+      // Enable attachment feature
+      commentElement.enableAttachment(true);
+      // Show screen size info
+      commentElement.showScreenSizeInfo(true);
 
-  const init = async () => {
-    const client = await Snippyly.init('TA66fUfxZVtGBqGxSTCz', {
-      featureAllowList: [], // To allow specific features only
-      // userIdAllowList: ['abcd'], // To allow specific users only
-      urlAllowList: [], // To allow snippyly in specific screens only
-    }); // Add your Api Key here
-    console.log('snippyly client', client);
-    setClient(client);
+      // To enable live selection feature
+      const selectionElement = client.getSelectionElement();
+      selectionElement.enableLiveSelection(true);
 
-    // To enable text comment feature
-    const commentElement = client.getCommentElement();
-    commentElement.enableTextComments(true);
-    // Enable attachment feature
-    commentElement.enableAttachment(true);
-    // Show screen size info
-    commentElement.showScreenSizeInfo(true);
-
-    // To enable live selection feature
-    const selectionElement = client.getSelectionElement();
-    selectionElement.enableLiveSelection(true);
-
-    // Set document id
-    client.setDocumentId(excludeSnippylyParamsFromUrl(window.location.href));
+      // Set document id
+      client.setDocumentId(excludeSnippylyParamsFromUrl(window.location.href));
+    }
   }
 
   const excludeSnippylyParamsFromUrl = (url: string) => {
@@ -52,21 +40,25 @@ function App() {
   }
 
   return (
-    <SnippylyContext.Provider value={{ client }}>
+    <SnippylyProvider apiKey='TA66fUfxZVtGBqGxSTCz' config={{
+      featureAllowList: [], // To allow specific features only
+      // userIdAllowList: ['abcd'], // To allow specific users only
+      urlAllowList: [], // To allow snippyly in specific screens only
+    }} onClientLoad={(client) => init(client)}>
       <div>
-        <snippyly-cursor></snippyly-cursor>
-        <snippyly-comments-sidebar></snippyly-comments-sidebar>
-        <snippyly-comment-tool></snippyly-comment-tool>
-        <snippyly-recorder-control-panel></snippyly-recorder-control-panel>
-        <snippyly-recorder-notes></snippyly-recorder-notes>
-        <snippyly-huddle></snippyly-huddle>
+        <SnippylyCursor />
+        <SnippylyCommentsSidebar />
+        <SnippylyCommentTool />
+        <SnippylyRecorderControlPanel />
+        <SnippylyRecorderNotes />
+        <SnippylyHuddle />
         <Toolbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/stream-view" element={<StreamView />} />
         </Routes>
       </div>
-    </SnippylyContext.Provider>
+    </SnippylyProvider>
   );
 }
 

@@ -1,23 +1,24 @@
+import { SnippylyComments, SnippylyHuddleTool, SnippylyRecorderTool } from '@snippyly/react';
 import React from 'react'
 
 function Home() {
     return (
         <>
-            <snippyly-comments></snippyly-comments>
+            <SnippylyComments />
             <div className='toolbar-2'>
                 <div className="recorder-buttons">
                     <div>Recorders:</div>
-                    <snippyly-recorder-tool type="all"></snippyly-recorder-tool>
-                    <snippyly-recorder-tool type="audio"></snippyly-recorder-tool>
-                    <snippyly-recorder-tool type="video"></snippyly-recorder-tool>
-                    <snippyly-recorder-tool type="screen"></snippyly-recorder-tool>
+                    <SnippylyRecorderTool type="all" />
+                    <SnippylyRecorderTool type="audio" />
+                    <SnippylyRecorderTool type="video" />
+                    <SnippylyRecorderTool type="screen" />
                 </div>
                 <div className="huddle-buttons">
                     <div>Huddle:</div>
-                    <snippyly-huddle-tool type="all"></snippyly-huddle-tool>
-                    <snippyly-huddle-tool></snippyly-huddle-tool>
-                    <snippyly-huddle-tool type="video"></snippyly-huddle-tool>
-                    <snippyly-huddle-tool type="presentation"></snippyly-huddle-tool>
+                    <SnippylyHuddleTool type="all" />
+                    <SnippylyHuddleTool />
+                    <SnippylyHuddleTool type="video" />
+                    <SnippylyHuddleTool type="presentation" />
                 </div>
             </div>
             <div className="box-container">

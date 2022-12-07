@@ -1,6 +1,6 @@
-import { PresenceUser } from '@snippyly/sdk';
+import { useSnippylyClient } from '@snippyly/react';
+import { PresenceUser } from '@snippyly/types';
 import React, { useEffect, useState } from 'react';
-import { useSnippylyClient } from '../../context/SnippylyContext';
 
 function Presence() {
 

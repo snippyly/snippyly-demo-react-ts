@@ -1,6 +1,6 @@
-import { CursorUser } from '@snippyly/sdk';
+import { useSnippylyClient } from '@snippyly/react';
+import { CursorUser } from '@snippyly/types';
 import React, { useEffect, useState } from 'react';
-import { useSnippylyClient } from '../../context/SnippylyContext';
 
 function Cursor() {
 

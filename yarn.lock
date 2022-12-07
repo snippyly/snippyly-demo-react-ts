@@ -1697,10 +1697,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snippyly/sdk@^1.0.54":
-  version "1.0.54"
-  resolved "https://registry.yarnpkg.com/@snippyly/sdk/-/sdk-1.0.54.tgz#1f090bdee4c68215b1c1c6b5dc69ffb1bc384315"
-  integrity sha512-EqbbAiGSmdvRy+4UWcVUL6CZY1gpuwXG8AitmODNlgoxM4bNpmV1tVrN9iDQX+WaTQoNxZKZU/nrqY2JwofyHQ==
+"@snippyly/react@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@snippyly/react/-/react-1.0.2.tgz#591a48daa4a9f489e5394e3dd9febb0ca50c07b1"
+  integrity sha512-0QbkPyZoMYQiJfBc8m1PlXm9awNda6ZvWyMb5Diwc7xvfBo+5a3n+uxPWJYOkt5pDdNbzRbsOSn+Qv5QU+36MQ==
+
+"@snippyly/types@^1.0.62":
+  version "1.0.62"
+  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.62.tgz#70f8ca4b8a8e0061213eec864d98069fc2e37359"
+  integrity sha512-cajzMyVVxLB0es/86NJOy37nvdiQTVfNHpzDEhoajE+prSIsuQXqjPqZLqns+2XjwtuB9jB1JE4kJLXsz4syOg==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
