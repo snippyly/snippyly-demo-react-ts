@@ -1,5 +1,5 @@
+import { SnippylyPresence, useSnippylyClient } from '@snippyly/react';
 import React, { useEffect, useState } from 'react'
-import { useSnippylyClient } from '../../context/SnippylyContext';
 import './Tabs.css';
 
 function Tabs({ selectedMenu }: { selectedMenu: any }) {
@@ -51,7 +51,7 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
                                     <div key={index} className={`tab ${(selectedTab === index + 1) ? 'selected' : ''}`} onClick={() => setSelectedTab(index + 1)}>
                                         {tab}
                                         <div className='presence-container'>
-                                            <snippyly-presence id={`tab${index}`} max-users="1" location={JSON.stringify(tabDocumentParams[index])}></snippyly-presence>
+                                            <SnippylyPresence maxUsers={1} location={JSON.stringify(tabDocumentParams[index])} />
                                         </div>
                                     </div>
                                 </>
