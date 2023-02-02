@@ -1455,15 +1455,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snippyly/react@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@snippyly/react/-/react-1.0.2.tgz#591a48daa4a9f489e5394e3dd9febb0ca50c07b1"
-  integrity sha512-0QbkPyZoMYQiJfBc8m1PlXm9awNda6ZvWyMb5Diwc7xvfBo+5a3n+uxPWJYOkt5pDdNbzRbsOSn+Qv5QU+36MQ==
+"@snippyly/react@^1.0.19":
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@snippyly/react/-/react-1.0.19.tgz#9aedc0f06f1397e9a8914ed78f7ca2b12b7abbe7"
+  integrity sha512-XY9HQ/p117/ESscxOUBrwiKEHosvFaRzLoDp5zWVyxj91eWIZ/tS5pkHWwgfiEsgLadI4RK58OPJ/HHxz53ZFg==
 
-"@snippyly/types@^1.0.62":
-  version "1.0.62"
-  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.62.tgz#70f8ca4b8a8e0061213eec864d98069fc2e37359"
-  integrity sha512-cajzMyVVxLB0es/86NJOy37nvdiQTVfNHpzDEhoajE+prSIsuQXqjPqZLqns+2XjwtuB9jB1JE4kJLXsz4syOg==
+"@snippyly/types@^1.0.81":
+  version "1.0.81"
+  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.81.tgz#6e3d89088f77b0a4224451e6c0bccb7039bd0814"
+  integrity sha512-nCC/2fE4NDuGoZnKGpNKZmL8B2DBleZjdWTg9G45XBc9VnHcQzgv4gwR8GF8xbV9PJw/cYueUKnsP3JkuYddyw==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
