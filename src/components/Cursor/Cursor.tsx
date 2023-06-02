@@ -1,12 +1,12 @@
-import { useSnippylyClient } from '@snippyly/react';
-import { CursorUser } from '@snippyly/types';
+import { useVeltClient } from '@veltdev/react';
+import { CursorUser } from '@veltdev/types';
 import React, { useEffect, useState } from 'react';
 
 function Cursor() {
 
     const [cursorUsers, setCursorUsers] = useState<CursorUser[]>([]);
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         if (client) {

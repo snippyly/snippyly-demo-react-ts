@@ -1,4 +1,4 @@
-import { SnippylyPresence, useSnippylyClient } from '@snippyly/react';
+import { VeltPresence, useVeltClient } from '@veltdev/react';
 import React, { useEffect, useState } from 'react'
 import { Users } from '../../Users';
 
@@ -6,7 +6,7 @@ function Toolbar() {
     const [selectedUser, setSelectedUser] = useState<any>(null);
     const users = Users;
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         if (localStorage.getItem('user')) {
@@ -16,11 +16,11 @@ function Toolbar() {
 
     useEffect(() => {
         if (selectedUser && client) {
-            identifySnippyly();
+            identifyVelt();
         }
     }, [selectedUser && client])
 
-    const identifySnippyly = async () => {
+    const identifyVelt = async () => {
         if (client) {
             client.identify(selectedUser).then((res) => {
                 // User login successful
@@ -32,7 +32,7 @@ function Toolbar() {
 
     const signIn = (user: any): void => {
         // Add custom logic here to login user
-        // Once user is available call identifySnippyly
+        // Once user is available call identifyVelt
         localStorage.setItem('user', JSON.stringify(user));
         setSelectedUser(user);
     }
@@ -51,7 +51,7 @@ function Toolbar() {
 
     return (
         <div className='header'>
-            <SnippylyPresence />
+            <VeltPresence />
             <div className='menu-container'>
                 <span className='menu' onClick={() => navigateTo('/')}>Home</span>
                 <span className='menu' onClick={() => navigateTo('/stream-view')}>Stream View</span>

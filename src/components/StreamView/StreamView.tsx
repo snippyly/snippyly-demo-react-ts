@@ -1,15 +1,15 @@
-import { SnippylyComments, useSnippylyClient } from '@snippyly/react';
+import { VeltComments, useVeltClient } from '@veltdev/react';
 import React, { useEffect } from 'react'
 import './StreamView.css'
 
 function StreamView() {
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         if (client) {
             const commentElement = client.getCommentElement();
-            commentElement.enableStreamMode(true);
+            commentElement.enableStreamMode();
             commentElement.allowedElementIds(['streamViewContainer']);
         }
     }, [client]);
@@ -37,7 +37,7 @@ function StreamView() {
                 </p>
             </div>
             <div className='stream-view-comments-container'>
-                <SnippylyComments streamViewContainerId='streamViewContainer' />
+                <VeltComments streamViewContainerId='streamViewContainer' />
             </div>
         </div>
     )

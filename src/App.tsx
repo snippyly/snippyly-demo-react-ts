@@ -1,5 +1,5 @@
-import { SnippylyCommentsSidebar, SnippylyCommentTool, SnippylyCursor, SnippylyHuddle, SnippylyProvider, SnippylyRecorderControlPanel, SnippylyRecorderNotes } from '@snippyly/react';
-import { Snippyly } from '@snippyly/types';
+import { VeltCommentsSidebar, VeltCommentTool, VeltCursor, VeltHuddle, VeltProvider, VeltRecorderControlPanel, VeltRecorderNotes } from '@veltdev/react';
+import { Velt } from '@veltdev/types';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
@@ -8,26 +8,26 @@ import Toolbar from './components/Toolbar/Toolbar';
 
 function App() {
 
-  const init = async (client?: Snippyly) => {
+  const init = async (client?: Velt) => {
     if (client) {
       // To enable text comment feature
       const commentElement = client.getCommentElement();
-      commentElement.enableTextComments(true);
+      commentElement.enableTextComments();
       // Enable attachment feature
-      commentElement.enableAttachment(true);
+      commentElement.disableAttachments();
       // Show screen size info
-      commentElement.showScreenSizeInfo(true);
+      commentElement.enableDeviceInfo();
 
       // To enable live selection feature
       const selectionElement = client.getSelectionElement();
-      selectionElement.enableLiveSelection(true);
+      selectionElement.enableLiveSelection();
 
       // Set document id
-      client.setDocumentId(excludeSnippylyParamsFromUrl(window.location.href));
+      client.setDocumentId(excludeVeltParamsFromUrl(window.location.href));
     }
   }
 
-  const excludeSnippylyParamsFromUrl = (url: string) => {
+  const excludeVeltParamsFromUrl = (url: string) => {
     try {
       const tempUrl = new URL(url);
       ['review', 'sreviewId', 'snippyly-user', 'scommentId', 'stagId'].forEach((param) => {
@@ -40,25 +40,25 @@ function App() {
   }
 
   return (
-    <SnippylyProvider apiKey='TA66fUfxZVtGBqGxSTCz' config={{
+    <VeltProvider apiKey='TA66fUfxZVtGBqGxSTCz' config={{
       featureAllowList: [], // To allow specific features only
       // userIdAllowList: ['abcd'], // To allow specific users only
-      urlAllowList: [], // To allow snippyly in specific screens only
+      urlAllowList: [], // To allow velt in specific screens only
     }} onClientLoad={(client) => init(client)}>
       <div>
-        <SnippylyCursor />
-        <SnippylyCommentsSidebar />
-        <SnippylyCommentTool />
-        <SnippylyRecorderControlPanel />
-        <SnippylyRecorderNotes />
-        <SnippylyHuddle />
+        <VeltCursor />
+        <VeltCommentsSidebar />
+        <VeltCommentTool />
+        <VeltRecorderControlPanel />
+        <VeltRecorderNotes />
+        <VeltHuddle />
         <Toolbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/stream-view" element={<StreamView />} />
         </Routes>
       </div>
-    </SnippylyProvider>
+    </VeltProvider>
   );
 }
 
