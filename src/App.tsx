@@ -1,5 +1,5 @@
-import { SnippylyComments, SnippylyCommentsSidebar, SnippylyCommentTool, SnippylyCursor, SnippylyProvider } from '@snippyly/react';
-import { Snippyly } from '@snippyly/types';
+import { VeltComments, VeltCommentsSidebar, VeltCommentTool, VeltCursor, VeltProvider } from '@veltdev/react';
+import { Velt } from '@veltdev/types';
 import { useState } from 'react';
 import './App.css';
 import Tabs from './components/Tabs/Tabs';
@@ -9,30 +9,30 @@ function App() {
 
   const [selectedMenu, setSelectedMenu] = useState();
 
-  const init = async (client?: Snippyly) => {
+  const init = async (client?: Velt) => {
     if (client) {
       // Enable attachment feature
       const commentElement = client.getCommentElement();
-      commentElement.enableAttachment(true);
-      commentElement.showScreenSizeInfo(true);
+      commentElement.enableAttachments();
+      commentElement.enableDeviceInfo();
     }
   }
 
   return (
-    <SnippylyProvider apiKey='TA66fUfxZVtGBqGxSTCz' config={{
+    <VeltProvider apiKey='TA66fUfxZVtGBqGxSTCz' config={{
       featureAllowList: [], // To allow specific features only
       // userIdAllowList: ['abcd'], // To allow specific users only
-      urlAllowList: [], // To allow snippyly in specific screens only
+      urlAllowList: [], // To allow velt in specific screens only
     }} onClientLoad={(client) => init(client)}>
       <div>
-        <SnippylyCursor />
-        <SnippylyComments />
-        <SnippylyCommentsSidebar />
-        <SnippylyCommentTool />
+        <VeltCursor />
+        <VeltComments />
+        <VeltCommentsSidebar />
+        <VeltCommentTool />
         <Toolbar onMenuSelect={(menu: any) => setSelectedMenu(menu)} />
         <Tabs selectedMenu={selectedMenu} />
       </div>
-    </SnippylyProvider>
+    </VeltProvider>
   );
 }
 

@@ -1455,16 +1455,6 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snippyly/react@^1.0.21":
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/@snippyly/react/-/react-1.0.21.tgz#26f9ad45b633015e69188b25a405c9bd419f71af"
-  integrity sha512-1EohISoftO7+Vlvko/Uv5+gSIc48UsLpStVgZjNpwlKJazixTMiZr6c2V8L6Sw7CEACQoihjUiTcsVX4lRHE9w==
-
-"@snippyly/types@^1.0.82":
-  version "1.0.82"
-  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.82.tgz#1585858ca859e3820136c6cb8b0dee05f67e4e20"
-  integrity sha512-fTeQP2R5bkop23KfLjDYK6O0MPXNWxiiM+s3Aw91jSPVoifDiGBjOFkj0QuHWNzX0JxI7bZ5oG+Mq5dTw6KXwA==
-
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"
@@ -2032,6 +2022,16 @@
   dependencies:
     "@typescript-eslint/types" "5.20.0"
     eslint-visitor-keys "^3.0.0"
+
+"@veltdev/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@veltdev/react/-/react-1.0.3.tgz#94a4308f227755e02b3854f82747dd09a7f13d06"
+  integrity sha512-LUvompe/JbMWFRc7TiOOzedGvasjWQhgRuNy3iskDRnX7GeKmEbiv3xVB5up3zncC2RsJDHnZI+pNSf8eBMpIQ==
+
+"@veltdev/types@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@veltdev/types/-/types-1.0.2.tgz#2178aa58160cb512d92e3907c79c27fd45cb4bd7"
+  integrity sha512-EOmShEMARxCQAyA4r95JtScuDm4k05bhDbcOyfO0TFieR2N+AjgmtYR4k1MHaFrLXw+5vEiRctZz9i2d374deQ==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"

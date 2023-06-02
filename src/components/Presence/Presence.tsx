@@ -1,12 +1,12 @@
-import { useSnippylyClient } from '@snippyly/react';
-import { PresenceUser } from '@snippyly/types';
+import { useVeltClient } from '@veltdev/react';
+import { PresenceUser } from '@veltdev/types';
 import React, { useEffect, useState } from 'react';
 
 function Presence() {
 
     const [presenceUsers, setPresenceUsers] = useState<PresenceUser[]>([]);
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         if (client) {

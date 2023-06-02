@@ -1,4 +1,4 @@
-import { useSnippylyClient } from '@snippyly/react';
+import { useVeltClient } from '@veltdev/react';
 import React, { useEffect, useState } from 'react'
 import './Menus.css';
 
@@ -13,7 +13,7 @@ function Menus({ onMenuSelect }: { onMenuSelect: Function }) {
     const [menus, setMenus] = useState(menuArray);
     const [selectedMenu, setSelectedMenu] = useState(0);
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         if (client) {
